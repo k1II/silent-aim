@@ -1,0 +1,49 @@
+--fluro#0009 n ekj#0001
+
+local main = Instance.new("ScreenGui")
+local main_2 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local silent = Instance.new("TextButton")
+local credits = Instance.new("TextLabel")
+
+--Properties:
+
+main.Name = "main"
+main.Parent = game.CoreGui
+
+main_2.Name = "main"
+main_2.Parent = main
+main_2.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+main_2.Position = UDim2.new(0.325059086, 0, 0.395904452, 0)
+main_2.Size = UDim2.new(0, 296, 0, 140)
+main_2.Active = true
+main_2.Draggable = true
+UICorner.Parent = main_2
+
+silent.Name = "silent"
+silent.Parent = main_2
+silent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+silent.BackgroundTransparency = 1.000
+silent.Position = UDim2.new(0.162162155, 0, 0.321428567, 0)
+silent.Size = UDim2.new(0, 200, 0, 50)
+silent.Font = Enum.Font.Highway
+silent.Text = "q to toggle"
+silent.TextColor3 = Color3.fromRGB(255, 170, 255)
+silent.TextScaled = true
+silent.TextSize = 1.000
+silent.TextWrapped = true
+silent.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/k1II/silent-aim/main/message_3.txt"))()
+
+	credits.Name = "credits"
+	credits.Parent = main_2
+	credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	credits.BackgroundTransparency = 1.000
+	credits.Position = UDim2.new(0.141891897, 0, 0.742857158, 0)
+	credits.Size = UDim2.new(0, 200, 0, 50)
+	credits.Font = Enum.Font.Nunito
+	credits.Text = "fluro#0009 n ekj#0001"
+	credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+	credits.TextSize = 17.000
+end
+)
